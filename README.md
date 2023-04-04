@@ -24,11 +24,11 @@ npm run build
 
 Vue is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative and component-based programming model that helps you efficiently develop user interfaces, be they simple or complex.
 
-### Performance Vue (Comparison to other Frameworks)
-
-</summary>
+<details><summary><h3> Performance Vue (Comparison to other Frameworks)</h3></summary>
 
 Vue.js, React.js, and Angular are three of the most popular front-end web development frameworks. Each framework has its own unique features and advantages, and choosing the right one for your project can be a difficult decision. In this comparison, we'll take a look at some of the key differences between Vue.js, React.js, and Angular to help you make an informed decision.
+
+</details>
 
 #### Vue.js
 
