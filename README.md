@@ -134,6 +134,7 @@ Both API styles are fully capable of covering common use cases. They are differe
 - We can create a reactive object or array with the reactive() function.
 - To use reactive state in a component's template, declare and return them from a component's setup() function.
 - Similarly, we can declare functions that mutate reactive state in the same scope and expose them as methods alongside the state.
+
 - When using Single-File Components (SFCs), we can greatly simplify the usage with <script setup>:
 
 ```js
