@@ -28,8 +28,6 @@ Vue is a JavaScript framework for building user interfaces. It builds on top of 
 
 Vue.js, React.js, and Angular are three of the most popular front-end web development frameworks. Each framework has its own unique features and advantages, and choosing the right one for your project can be a difficult decision. In this comparison, we'll take a look at some of the key differences between Vue.js, React.js, and Angular to help you make an informed decision.
 
-</details>
-
 #### Vue.js
 
 Vue.js is a lightweight front-end framework that emphasizes simplicity and ease of use. It was created in 2014 by Evan You and has gained a lot of popularity in recent years. Vue.js offers a variety of features that make it a great choice for building small to medium-sized applications.
@@ -81,10 +79,9 @@ React.js is a popular front-end framework developed by Facebook. It was first re
 - Performance: Angular can be slower to load and render initially compared to other frameworks, due to its heavy-weight architecture and ahead-of-time compilation.
 - Limited flexibility: Angular's opinionated architecture can limit flexibility and make it difficult to integrate with other libraries or tools.
 - Large bundle size: Angular applications can have a large bundle size, which can impact performance and load times, especially on slow or mobile networks.
+</details>
 
-### Bundle Sizes
-
-</summary>
+<details><summary><h3>Bundle Sizes</h3></summary>
 
 Vue.js is known for its small size and minimal footprint. The core library of Vue.js, without any additional plugins or dependencies, is only around 24KB after minification and gzip compression. This makes it one of the smallest JavaScript frameworks available.
 
@@ -94,11 +91,9 @@ To reduce the bundle size of a Vue.js application, there are several strategies 
 
 Another strategy is to use tree shaking, which is a technique for removing unused code from your application. This can help to further reduce the overall bundle size and improve performance.
 
-Overall, Vue.js is a lightweight and efficient framework, and with proper optimization techniques, it's possible to build fast and performant applications while keeping the bundle size to a minimum.
+Overall, Vue.js is a lightweight and efficient framework, and with proper optimization techniques, it's possible to build fast and performant applications while keeping the bundle size to a minimum.</details>
 
-### Routing
-
-</summary>
+<details><summary><h3>Routing</h3></summary>
 
 #### Introduction to Vue Router
 
@@ -148,13 +143,11 @@ export default {
 
 **Link to the Docs:** https://router.vuejs.org/guide/
 
-### Lifecycle Hooks
+</details>
 
-</summary>
+<details><summary><h3>Lifecycle Hooks</h3></summary>
 
 #### onMounted()​
-
-</summary>
 
 Registers a callback to be called after the component has been mounted.
 
@@ -196,7 +189,6 @@ onMounted(() => {
 
 #### onUpdated()​
 
-</summary>
 Registers a callback to be called after the component has updated its DOM tree due to a reactive state change.
 
 **Type**
@@ -234,7 +226,6 @@ onUpdated(() => {
 
 #### onUnmounted()​
 
-</summary>
 Registers a callback to be called after the component has been unmounted.
 
 **Type**
@@ -271,7 +262,6 @@ onUnmounted(() => clearInterval(intervalId))
 
 #### onBeforeMount()​
 
-</summary>
 Registers a hook to be called right before the component is to be mounted.
 
 **Type**
@@ -288,7 +278,6 @@ This hook is not called during server-side rendering.
 
 #### onBeforeUpdate()​
 
-</summary>
 Registers a hook to be called right before the component is about to update its DOM tree due to a reactive state change.
 
 **Type**
@@ -305,7 +294,6 @@ This hook is not called during server-side rendering.
 
 #### onBeforeUnmount()​
 
-</summary>
 Registers a hook to be called right before a component instance is to be unmounted.
 
 **Type**
@@ -320,9 +308,10 @@ When this hook is called, the component instance is still fully functional.
 
 This hook is not called during server-side rendering.
 
-### API Styles
+</details>
 
-</summary>
+<details><summary><h3>API Styles</h3></summary>
+
 Vue components can be authored in two different API styles: Options API and Composition API.
 
 #### Options API
@@ -402,10 +391,9 @@ Both API styles are fully capable of covering common use cases. They are differe
 - Go with Options API if you are not using build tools, or plan to use Vue primarily in low-complexity scenarios, e.g. progressive enhancement.
 
 - Go with Composition API + Single-File Components if you plan to build full applications with Vue
+</details>
 
-### Reactive Code (Declarative vs. Imperative Coding)
-
-</summary>
+<details><summary><h3>Reactive Code (Declarative vs. Imperative Coding)</h3></summary>
 
 #### Declaring Reactive State
 
@@ -452,6 +440,6 @@ import { ref } from "vue";
 const count = ref(0);
 ```
 
-### Dependency Injection
+</details>
 
-</summary>
+<details><summary><h3>Dependency Injection<h3></summary>
