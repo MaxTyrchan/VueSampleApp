@@ -26,6 +26,8 @@ Vue is a JavaScript framework for building user interfaces. It builds on top of 
 
 ### Performance Vue (Comparison to other Frameworks)
 
+</summary>
+
 Vue.js, React.js, and Angular are three of the most popular front-end web development frameworks. Each framework has its own unique features and advantages, and choosing the right one for your project can be a difficult decision. In this comparison, we'll take a look at some of the key differences between Vue.js, React.js, and Angular to help you make an informed decision.
 
 #### Vue.js
@@ -82,6 +84,8 @@ React.js is a popular front-end framework developed by Facebook. It was first re
 
 ### Bundle Sizes
 
+</summary>
+
 Vue.js is known for its small size and minimal footprint. The core library of Vue.js, without any additional plugins or dependencies, is only around 24KB after minification and gzip compression. This makes it one of the smallest JavaScript frameworks available.
 
 However, the size of a Vue.js application can vary depending on the features and dependencies used. For example, if you're using the Vue CLI to generate a new project, it comes with additional dependencies like webpack, babel, and other plugins, which can increase the overall size of the project.
@@ -93,6 +97,8 @@ Another strategy is to use tree shaking, which is a technique for removing unuse
 Overall, Vue.js is a lightweight and efficient framework, and with proper optimization techniques, it's possible to build fast and performant applications while keeping the bundle size to a minimum.
 
 ### Routing
+
+</summary>
 
 #### Introduction to Vue Router
 
@@ -144,9 +150,180 @@ export default {
 
 ### Lifecycle Hooks
 
-#### Weitere Hooks
+</summary>
+
+#### onMounted()​
+
+</summary>
+
+Registers a callback to be called after the component has been mounted.
+
+**Type**
+
+ts
+function onMounted(callback: () => void): void
+
+**Details**
+
+A component is considered mounted after:
+
+- All of its synchronous child components have been mounted (does not include async components or components inside <Suspense> trees).
+- Its own DOM tree has been created and inserted into the parent container. Note it only guarantees that the component's DOM tree is in-document if the application's root container is also in-document.
+
+This hook is typically used for performing side effects that need access to the component's rendered DOM, or for limiting DOM-related code to the client in a server-rendered application.
+
+This hook is not called during server-side rendering.
+
+**Example**
+
+Accessing an element via template ref:
+
+```js
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const el = ref()
+
+onMounted(() => {
+  el.value // <div>
+})
+</script>
+
+<template>
+  <div ref="el"></div>
+</template>
+```
+
+#### onUpdated()​
+
+</summary>
+Registers a callback to be called after the component has updated its DOM tree due to a reactive state change.
+
+**Type**
+
+```ts
+function onUpdated(callback: () => void): void;
+```
+
+A parent component's updated hook is called after that of its child components.
+
+This hook is called after any DOM update of the component, which can be caused by different state changes. If you need to access the updated DOM after a specific state change, use nextTick() instead.
+
+This hook is not called during server-side rendering.
+
+**Example**
+
+Accessing updated DOM:
+
+```js
+<script setup>
+import { ref, onUpdated } from 'vue'
+
+const count = ref(0)
+
+onUpdated(() => {
+  // text content should be the same as current `count.value`
+  console.log(document.getElementById('count').textContent)
+})
+</script>
+
+<template>
+  <button id="count" @click="count++">{{ count }}</button>
+</template>
+```
+
+#### onUnmounted()​
+
+</summary>
+Registers a callback to be called after the component has been unmounted.
+
+**Type**
+
+```ts
+function onUnmounted(callback: () => void): void;
+```
+
+A component is considered unmounted after:
+
+- All of its child components have been unmounted.
+- All of its associated reactive effects (render effect and computed / watchers created during setup()) have been stopped.
+
+Use this hook to clean up manually created side effects such as timers, DOM event listeners or server connections.
+
+This hook is not called during server-side rendering.
+
+**Example**
+
+```ts
+<script setup>
+import { onMounted, onUnmounted } from 'vue'
+
+let intervalId
+onMounted(() => {
+  intervalId = setInterval(() => {
+    // ...
+  })
+})
+
+onUnmounted(() => clearInterval(intervalId))
+</script>
+```
+
+#### onBeforeMount()​
+
+</summary>
+Registers a hook to be called right before the component is to be mounted.
+
+**Type**
+
+```ts
+function onBeforeMount(callback: () => void): void;
+```
+
+**Details**
+
+When this hook is called, the component has finished setting up its reactive state, but no DOM nodes have been created yet. It is about to execute its DOM render effect for the first time.
+
+This hook is not called during server-side rendering.
+
+#### onBeforeUpdate()​
+
+</summary>
+Registers a hook to be called right before the component is about to update its DOM tree due to a reactive state change.
+
+**Type**
+
+```ts
+function onBeforeUpdate(callback: () => void): void;
+```
+
+**Details**
+
+This hook can be used to access the DOM state before Vue updates the DOM. It is also safe to modify component state inside this hook.
+
+This hook is not called during server-side rendering.
+
+#### onBeforeUnmount()​
+
+</summary>
+Registers a hook to be called right before a component instance is to be unmounted.
+
+**Type**
+
+```ts
+function onBeforeUnmount(callback: () => void): void;
+```
+
+**Details**
+
+When this hook is called, the component instance is still fully functional.
+
+This hook is not called during server-side rendering.
 
 ### API Styles
+
+</summary>
+Vue components can be authored in two different API styles: Options API and Composition API.
 
 #### Options API
 
@@ -228,6 +405,8 @@ Both API styles are fully capable of covering common use cases. They are differe
 
 ### Reactive Code (Declarative vs. Imperative Coding)
 
+</summary>
+
 #### Declaring Reactive State
 
 - We can create a reactive object or array with the reactive() function.
@@ -274,3 +453,5 @@ const count = ref(0);
 ```
 
 ### Dependency Injection
+
+</summary>
