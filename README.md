@@ -94,6 +94,54 @@ Overall, Vue.js is a lightweight and efficient framework, and with proper optimi
 
 ### Routing
 
+#### Introduction to Vue Router
+
+Vue Router is the official router for Vue.js. It deeply integrates with Vue.js core to make building Single Page Applications with Vue.js a breeze. Features include:
+
+- Nested routes mapping
+- Dynamic Routing
+- Modular, component-based router configuration
+- Route params, query, wildcards
+- View transition effects powered by Vue.js' transition system
+- Fine-grained navigation control
+- Links with automatic active CSS classes
+- HTML5 history mode or hash mode
+- Customizable Scroll Behavior
+- Proper encoding for URLs
+
+#### Download
+
+**npm**
+
+```bash
+npm install vue-router@4
+```
+
+**yarn**
+
+```bash
+yarn add vue-router@4
+```
+
+#### Vue Router and the Composition API
+
+Because we don't have access to this inside of setup, we cannot directly access this.$router or this.$route anymore. Instead we use the useRouter and useRoute functions.
+The route object is a reactive object, so any of its properties can be watched and you should avoid watching the whole route object. In most scenarios, you should directly watch the param you are expecting to change.
+
+```js
+import { useRoute } from 'vue-router'
+import { ref, watch } from 'vue'
+
+export default {
+  setup() {
+    const route = useRoute()
+    const userData = ref()
+
+...
+```
+
+**Link to the Docs:** https://router.vuejs.org/guide/
+
 ### Lifecycle Hooks
 
 #### Weitere Hooks
