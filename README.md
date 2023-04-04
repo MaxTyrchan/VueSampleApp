@@ -41,9 +41,9 @@ VueJS sample App Requirements:
 
 ### Bundle Sizes
 
-### Routing (Das ist auch Teil deiner App)
+### Routing
 
-### Lifecycle Hooks (Gerne auch in der App nutzen)
+### Lifecycle Hooks
 
 #### Weitere Hooks
 
@@ -153,6 +153,24 @@ function increment() {
     {{ state.count }}
   </button>
 </template>
+```
+
+#### Reactive Variables with ref()
+
+To address the limitations of reactive(), Vue also provides a ref() function which allows us to create reactive "refs" that can hold any value type:
+
+```js
+import { ref } from "vue";
+
+const count = ref(0);
+```
+
+A ref containing an object value can reactively replace the entire object:
+
+```js
+import { ref } from "vue";
+
+const count = ref(0);
 ```
 
 ### Dependency Injection
