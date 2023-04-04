@@ -28,7 +28,7 @@ Vue is a JavaScript framework for building user interfaces. It builds on top of 
 
 Vue.js, React.js, and Angular are three of the most popular front-end web development frameworks. Each framework has its own unique features and advantages, and choosing the right one for your project can be a difficult decision. In this comparison, we'll take a look at some of the key differences between Vue.js, React.js, and Angular to help you make an informed decision.
 
-**Vue.js**
+#### Vue.js
 
 Vue.js is a lightweight front-end framework that emphasizes simplicity and ease of use. It was created in 2014 by Evan You and has gained a lot of popularity in recent years. Vue.js offers a variety of features that make it a great choice for building small to medium-sized applications.
 
@@ -46,7 +46,7 @@ Vue.js is a lightweight front-end framework that emphasizes simplicity and ease 
 - Limited ecosystem: The ecosystem around Vue.js is not as mature as some of the other frameworks, which means that there may be fewer plugins and tools available.
 - Limited scalability: Vue.js may not be the best choice for large-scale projects, as it lacks some of the scalability features of other frameworks.
 
-**React.js**
+#### React.js
 
 React.js is a popular front-end framework developed by Facebook. It was first released in 2013 and has since become one of the most widely used front-end frameworks. React.js is known for its performance and scalability, making it a good choice for large-scale projects.
 
@@ -81,6 +81,16 @@ React.js is a popular front-end framework developed by Facebook. It was first re
 - Large bundle size: Angular applications can have a large bundle size, which can impact performance and load times, especially on slow or mobile networks.
 
 ### Bundle Sizes
+
+Vue.js is known for its small size and minimal footprint. The core library of Vue.js, without any additional plugins or dependencies, is only around 24KB after minification and gzip compression. This makes it one of the smallest JavaScript frameworks available.
+
+However, the size of a Vue.js application can vary depending on the features and dependencies used. For example, if you're using the Vue CLI to generate a new project, it comes with additional dependencies like webpack, babel, and other plugins, which can increase the overall size of the project.
+
+To reduce the bundle size of a Vue.js application, there are several strategies that can be used. One common approach is to use code splitting, which allows you to split your application code into smaller, more manageable chunks that can be loaded on demand as needed. This can greatly reduce the initial load time and improve performance.
+
+Another strategy is to use tree shaking, which is a technique for removing unused code from your application. This can help to further reduce the overall bundle size and improve performance.
+
+Overall, Vue.js is a lightweight and efficient framework, and with proper optimization techniques, it's possible to build fast and performant applications while keeping the bundle size to a minimum.
 
 ### Routing
 
