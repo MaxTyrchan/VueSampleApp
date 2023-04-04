@@ -1,9 +1,27 @@
 <script setup lang="ts">
-import TheWelcome from "../components/TheWelcome.vue";
+import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    <h1>Home</h1>
+    <ul>
+      <li>
+        <a href="https://github.com/MaxTyrchan/VueSampleApp#lifecycle-hooks"
+          >Github Repository</a
+        >
+      </li>
+      <li><a href="/user-input">User Input Function</a></li>
+      <li>
+        <a href="/conditionals-loops">Conditionals and Loops Functions</a>
+      </li>
+      <li>
+        <a href="/counter">Counter Function</a>
+      </li>
+    </ul>
+  </div>
+  <br />
+  <hr class="dashed" />
+  <br />
+  <RouterView />
 </template>
