@@ -20,24 +20,65 @@ npm run dev
 npm run build
 ```
 
-## Project Information
-
-VueJS sample App Requirements:
-
-- 2 Seiten (Homepage & Unterseite)
-  - Homepage zeigt einen Hero
-  - Unterseite zeigt die Text Komponente
-  - Navigation ist auf beiden Seiten
-- 3 Komponenten (Navigation, Hero & Text Komponente)
-  - Navigation hat 2 Links
-  - Home & Unterseite
-  - Hero besteht aus Bild, Headline & Subtext
-  - Text Komponenten besteht aus Headline & Text
-- Typescript & SCSS.
-
 ## Framework Information
 
-### Performance Vue (Vergleich zu anderen Frameworks)
+Vue is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative and component-based programming model that helps you efficiently develop user interfaces, be they simple or complex.
+
+### Performance Vue (Comparison to other Frameworks)
+
+Vue.js, React.js, and Angular are three of the most popular front-end web development frameworks. Each framework has its own unique features and advantages, and choosing the right one for your project can be a difficult decision. In this comparison, we'll take a look at some of the key differences between Vue.js, React.js, and Angular to help you make an informed decision.
+
+**Vue.js**
+
+Vue.js is a lightweight front-end framework that emphasizes simplicity and ease of use. It was created in 2014 by Evan You and has gained a lot of popularity in recent years. Vue.js offers a variety of features that make it a great choice for building small to medium-sized applications.
+
+**Pros:**
+
+- Easy to learn: Vue.js is easy to learn and understand, even for developers who are new to web development. The framework has a simple and intuitive API, making it easy to get started with.
+- Lightweight: Vue.js is a lightweight framework that has a small footprint. This means that it loads quickly and is efficient in terms of memory usage.
+- Flexible: Vue.js is highly customizable and can be integrated into existing projects without much hassle. The framework is designed to be modular, which means that you can use only the parts of it that you need.
+- Great documentation: Vue.js has excellent documentation that is easy to follow and understand. This makes it easy to find answers to your questions and troubleshoot any issues you may encounter.
+- Good performance: Vue.js is fast and efficient, with a virtual DOM that minimizes the amount of DOM manipulation required. This makes it a good choice for building performant applications.
+
+**Cons:**
+
+- Small community: While Vue.js has gained a lot of popularity in recent years, it still has a smaller community than some of the other frameworks. This means that finding resources and support can be more difficult.
+- Limited ecosystem: The ecosystem around Vue.js is not as mature as some of the other frameworks, which means that there may be fewer plugins and tools available.
+- Limited scalability: Vue.js may not be the best choice for large-scale projects, as it lacks some of the scalability features of other frameworks.
+
+**React.js**
+
+React.js is a popular front-end framework developed by Facebook. It was first released in 2013 and has since become one of the most widely used front-end frameworks. React.js is known for its performance and scalability, making it a good choice for large-scale projects.
+
+**Pros:**
+
+- Good performance: React.js is known for its performance, with a virtual DOM that minimizes the amount of DOM manipulation required. This makes it a good choice for building performant applications.
+- Scalable: React.js is highly scalable and can be used to build large-scale applications. The framework is designed to be modular, which means that you can reuse components across your application.
+- Large community: React.js has a large and active community, which means that finding resources and support is easy. There are also a lot of plugins and tools available.
+- JSX: React.js uses JSX, a syntax that allows you to write HTML-like code in your JavaScript. This makes it easy to create reusable components and helps to keep your code organized.
+
+**Cons:**
+
+- Steep learning curve: React.js can be difficult to learn, especially for developers who are new to web development. The framework has a complex API and requires a good understanding of JavaScript.
+- Boilerplate: React.js requires a lot of boilerplate code, which can make it more difficult to get started with.
+- Opinionated: React.js is an opinionated framework, which means that it may not be the best choice for developers who prefer more flexibility and customization.
+
+#### Angular
+
+**Pros:**
+
+- Complete framework: Angular is a complete framework that comes with everything you need to build large-scale, complex web applications.
+- Built-in state management: Angular has a built-in state management system called RxJS, which is based on the reactive programming paradigm.
+- Powerful CLI: Angular comes with a powerful command-line interface (CLI) that makes it easy to create, scaffold, and build Angular applications.
+- Strong typing: Angular is built with TypeScript, a strongly-typed superset of JavaScript. This makes it easier to catch errors early and write more maintainable code.
+- Large community: Angular has a large and active community of developers, which means there are plenty of resources, tutorials, and plugins available.
+  **Cons:**
+
+- Steep learning curve: Angular has a steep learning curve, especially for developers who are new to the framework or to web development in general.
+- Overly complex: Some developers find Angular to be overly complex, with too many abstractions and boilerplate code.
+- Performance: Angular can be slower to load and render initially compared to other frameworks, due to its heavy-weight architecture and ahead-of-time compilation.
+- Limited flexibility: Angular's opinionated architecture can limit flexibility and make it difficult to integrate with other libraries or tools.
+- Large bundle size: Angular applications can have a large bundle size, which can impact performance and load times, especially on slow or mobile networks.
 
 ### Bundle Sizes
 
