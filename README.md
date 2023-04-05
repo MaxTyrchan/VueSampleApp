@@ -395,7 +395,10 @@ Both API styles are fully capable of covering common use cases. They are differe
 
 <details><summary><h3>Reactive Code (Declarative vs. Imperative Coding)</h3></summary>
 
-**_Declarative programming_** is when you write your code in such a way that it describes what you want to do, and not how you want to do it. It is left up to the compiler to figure out the how. **_Imperative programming_** on the other hand, is when your write sequences of commands, each of which perform some action; but which may or may not have meaning in the problem domain
+**_Declarative programming_** is when you write your code in such a way that it describes what you want to do, and not how you want to do it. It is left up to the compiler to figure out the how.
+
+**_Imperative programming_** on the other hand, is when your write sequences of commands, each of which perform some action; but which may or may not have meaning in the problem domain.
+
 **_Reactive programming_** describes a declarative design paradigm that relies on asynchronous programming logic to handle real-time updates to otherwise static content. It provides an efficient means -- the use of automated data streams -- to handle data updates to content whenever a user makes an inquiry.
 
 **Example**
@@ -430,11 +433,11 @@ watchEffect(() => {
 Reactive programming:
 
 ```js
-mport { ref, computed } from 'vue'
+import { ref, computed } from "vue";
 
-const A0 = ref(0)
-const A1 = ref(1)
-const A2 = computed(() => A0.value + A1.value)
+const A0 = ref(0);
+const A1 = ref(1);
+const A2 = computed(() => A0.value + A1.value);
 ```
 
 -> We first declare A0, A1, and A2 as reactive variables. We then use computed to declare a function that tracks A0 and A1. Whenever A0 or A1 changes, the function will be re-run and A2 will be updated.
