@@ -399,7 +399,45 @@ Both API styles are fully capable of covering common use cases. They are differe
 **_Reactive programming_** describes a declarative design paradigm that relies on asynchronous programming logic to handle real-time updates to otherwise static content. It provides an efficient means -- the use of automated data streams -- to handle data updates to content whenever a user makes an inquiry.
 
 **Example**
-In an imperative programming setting, a := b + c would mean that a is being assigned the result of b + c in the instant the expression is evaluated, and later, the values of b and c can be changed with no effect on the value of a. On the other hand, in reactive programming, the value of a is automatically updated whenever the values of b or c change, without the program having to explicitly re-execute the statement a := b + c to determine the presently assigned value of a.
+
+Sequencial & Imperative programming:
+
+```js
+let A0 = 1;
+let A1 = 2;
+let A2 = A0 + A1;
+```
+
+-> Sequentially, we first declare A0, then A1, then A2. We then assign A2 to the sum of A0 and A1. This is imperative programming.
+
+Declarative programming:
+
+```js
+import { ref, watchEffect } from "vue";
+
+const A0 = ref(0);
+const A1 = ref(1);
+const A2 = ref();
+
+watchEffect(() => {
+  // tracks A0 and A1
+  A2.value = A0.value + A1.value;
+});
+```
+
+-> We first declare A0, A1, and A2 as reactive variables. We then use watchEffect to declare a function that tracks A0 and A1. Whenever A0 or A1 changes, the function will be re-run and A2 will be updated.
+
+Reactive programming:
+
+```js
+mport { ref, computed } from 'vue'
+
+const A0 = ref(0)
+const A1 = ref(1)
+const A2 = computed(() => A0.value + A1.value)
+```
+
+-> We first declare A0, A1, and A2 as reactive variables. We then use computed to declare a function that tracks A0 and A1. Whenever A0 or A1 changes, the function will be re-run and A2 will be updated.
 
 #### Declaring Reactive State
 
