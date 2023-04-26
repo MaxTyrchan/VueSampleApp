@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import UserInput from "../components/UserInput.vue";
-import ConditionalsLoops from "../components/ConditionalsLoops.vue";
 import Counter from "../components/Counter.vue";
+import UserChange from "../components/UserChange.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,12 +17,12 @@ const router = createRouter({
           component: UserInput,
         },
         {
-          path: "conditionals-loops",
-          component: ConditionalsLoops,
-        },
-        {
           path: "counter",
           component: Counter,
+        },
+        {
+          path: "user-change",
+          component: UserChange,
         },
       ],
     },

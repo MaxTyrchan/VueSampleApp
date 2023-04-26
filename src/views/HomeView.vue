@@ -11,12 +11,18 @@ import { RouterView } from "vue-router";
           >Github Repository</a
         >
       </li>
+    </ul>
+    <h2>Reactive Functions</h2>
+    <ul>
       <li><a href="/user-input">User Input Function</a></li>
       <li>
-        <a href="/conditionals-loops">Conditionals and Loops Functions</a>
-      </li>
-      <li>
         <a href="/counter">Counter Function</a>
+      </li>
+    </ul>
+    <h2>Dependency Injection Function</h2>
+    <ul>
+      <li>
+        <a href="/user-change">User Change</a>
       </li>
     </ul>
   </div>

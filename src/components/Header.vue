@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { inject } from "vue";
+
+const user = inject("user");
+</script>
 
 <template>
   <header>
@@ -13,6 +17,7 @@
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">About</RouterLink>
     </nav>
+    <h3>User: {{ user }}</h3>
   </header>
 </template>
 
@@ -55,6 +60,8 @@ nav a:first-of-type {
 
 h3 {
   font-size: 1.2rem;
+  text-align: center;
+  align-self: center;
 }
 
 @media (min-width: 1024px) {
@@ -67,10 +74,22 @@ h3 {
     margin: 0 2rem 0 0;
   }
 
+  p {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
   nav {
     text-align: left;
     font-size: 1rem;
     margin-top: 1rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    align-self: center;
   }
 }
 </style>
