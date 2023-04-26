@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { computed } from "@vue/reactivity";
-import { ref, watchEffect } from "vue";
+import { ref, computed, watchEffect } from "vue";
 
 const count = ref(0);
+const result = computed(() => count.value * 2);
 
 const increment = () => {
   count.value++;
@@ -24,5 +24,7 @@ watchEffect(() => {
     <p>Count: {{ count }}</p>
     <button @click="increment">Increment</button>
     <button @click="decrement">Decrement</button>
+    <p>Faktor: 2</p>
+    <p>Result: {{ result }}</p>
   </div>
 </template>
