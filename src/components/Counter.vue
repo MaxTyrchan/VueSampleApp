@@ -5,7 +5,7 @@ import { ref, watchEffect } from "vue";
 const count = ref(0);
 
 const increment = () => {
-  count.value = count.value++;
+  count.value++;
 };
 
 const decrement = () => {

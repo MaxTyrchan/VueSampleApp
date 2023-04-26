@@ -7,7 +7,7 @@ import { RouterView } from "vue-router";
     <h1>Home</h1>
     <ul>
       <li>
-        <a href="https://github.com/MaxTyrchan/VueSampleApp#lifecycle-hooks"
+        <a href="https://github.com/MaxTyrchan/VueSampleApp"
           >Github Repository</a
         >
       </li>
