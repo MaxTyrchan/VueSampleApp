@@ -14,7 +14,6 @@ import { RouterView } from "vue-router";
     </ul>
     <h2>Reactive Functions</h2>
     <ul>
-      <li><a href="/user-input">User Input Function</a></li>
       <li>
         <a href="/counter">Counter Function</a>
       </li>

@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import UserInput from "../components/UserInput.vue";
 import Counter from "../components/Counter.vue";
 import UserChange from "../components/UserChange.vue";
 
@@ -12,10 +11,6 @@ const router = createRouter({
       name: "home",
       component: HomeView,
       children: [
-        {
-          path: "user-input",
-          component: UserInput,
-        },
         {
           path: "counter",
           component: Counter,
