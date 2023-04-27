@@ -17,6 +17,12 @@ import { RouterView } from "vue-router";
       <li>
         <a href="/counter">Counter Function</a>
       </li>
+      <li>
+        <a href="/cube-demo">Cube Demo</a>
+      </li>
+      <li>
+        <a href="/watcheffect">WatchEffect Demo</a>
+      </li>
     </ul>
     <h2>Dependency Injection Function</h2>
     <ul>
