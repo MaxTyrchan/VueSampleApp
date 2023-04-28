@@ -1,5 +1,6 @@
-<!-- Variant 1: <script setup>
-    
+<!-- Variant 1:
+<script setup>
+
 <script setup lang="ts">
 import { ref, onMounted, onUpdated } from "vue";
 
@@ -12,7 +13,6 @@ onMounted(() => {
 onUpdated(() => {
   num.value; // <div>
 });
-
 </script>
 
 <template>

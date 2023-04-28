@@ -23,16 +23,16 @@ watchEffect((onInvalidate) => {
 
 // does not work!
 // if (text.value.length > 0) {
-//   isTyping.value = "typing...";
+//   isTyping.value = true;
 // } else {
-//   isTyping.value = "";
+//   isTyping.value = false;
 // }
 
 // We can stop the Watcher with stop()
-// const stop = watchEffect(() => {
+// watchEffect(() => {
 //     // ... do smth
 //     if () {
-//         stop()
+// stop()
 //     }
 // })
 

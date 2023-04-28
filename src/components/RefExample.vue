@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, reactive, toRef, toRefs, computed, watchEffect } from "vue";
+import { ref, reactive, toRef, toRefs, computed } from "vue";
 
 // Vue2.0 -> observable() only for objects
 // const cube = observable({
@@ -16,14 +16,6 @@ const cube = reactive({
   height: 10,
 });
 
-// toRef() allows to create a reference to a property on an object
-const length = toRef(cube, "length");
-const width = toRef(cube, "width");
-const height = toRef(cube, "height");
-
-// Equivalent to:
-// const { length, width, height } = toRefs(cube);
-
 // ref() allows objects and primitives
 // const cube = ref(
 //     {
@@ -32,6 +24,14 @@ const height = toRef(cube, "height");
 //         height: 10,
 //     }
 // )
+
+// toRef() allows to create a reference to a property on an reactive object
+// const length = toRef(cube, "length");
+// const width = toRef(cube, "width");
+// const height = toRef(cube, "height");
+
+// Equivalent to:
+const { length, width, height } = toRefs(cube);
 
 // computed() takes a getter function and returns a readonly reactive ref object for the returned value from the getter.
 const volume = computed(() => length.value * width.value * height.value);
@@ -48,8 +48,6 @@ const volume = computed(() => length.value * width.value * height.value);
 
 // readonly() takes an object and returns a readonly proxy/copy of the object
 // const copy = readonly(original)
-
-// watchEffect() takes a callback function and runs it immediately and whenever any reactive dependency changes
 </script>
 
 <template>
